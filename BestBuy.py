@@ -13,15 +13,15 @@ from webdriver_manager.firefox import GeckoDriverManager
 from datetime import datetime
 
 # Twilio configuration
-toNumber = '19282666610'
-fromNumber = '17609194387'
-accountSid = 'AC4779e92e9bac789220ebdef983bccfba'
-authToken = '27e386bb1abd2a77e85d564826d30adf'
+toNumber = #redacted
+fromNumber = #redacted
+accountSid = #redacted
+authToken = #redacted
 client = Client(accountSid, authToken)
 
 #other vars
-cvvNum = '090'
-BestBuyPass = 'FzkSnJn+E%k4.Ec'
+cvvNum = #redacted
+BestBuyPass = #redacted
 
 
 # Product Page (By default, This URL will scan all RTX 3070 and 3080's at one time.)
@@ -45,7 +45,7 @@ def createDriver():
    """Creating driver."""
    options = Options()
    options.headless = False # Change To False if you want to see Firefox Browser Again.
-   profile = webdriver.FirefoxProfile(r'C:\Users\salte\AppData\Roaming\Mozilla\Firefox\Profiles\zcvnzel9.default-release')
+   profile = webdriver.FirefoxProfile(r#redacted)
    driver = webdriver.Firefox(profile, options=options, executable_path=GeckoDriverManager().install())
    return driver
 
