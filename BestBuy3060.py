@@ -25,9 +25,9 @@ BestBuyPass = 'FzkSnJn+E%k4.Ec'
 
 
 # Product Page (By default, This URL will scan all RTX 3070 and 3080's at one time.)
-url = 'https://www.bestbuy.com/site/searchpage.jsp?_dyncharset=UTF-8&id=pcat17071&iht=y&keys=keys&ks=960&list=n&qp=gpusv_facet%3DGraphics%20Processing%20Unit%20(GPU)~NVIDIA%20GeForce%20RTX%203070%5Egpusv_facet%3DGraphics%20Processing%20Unit%20(GPU)~NVIDIA%20GeForce%20RTX%203080&sc=Global&st=rtx%203080%203070&type=page&usc=All%20Categories'
+# 3080 and 3070 url = 'https://www.bestbuy.com/site/searchpage.jsp?_dyncharset=UTF-8&id=pcat17071&iht=y&keys=keys&ks=960&list=n&qp=gpusv_facet%3DGraphics%20Processing%20Unit%20(GPU)~NVIDIA%20GeForce%20RTX%203070%5Egpusv_facet%3DGraphics%20Processing%20Unit%20(GPU)~NVIDIA%20GeForce%20RTX%203080&sc=Global&st=rtx%203080%203070&type=page&usc=All%20Categories'
 #ethernet url url = 'https://www.bestbuy.com/site/searchpage.jsp?st=ethernet&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
-
+url = 'https://www.bestbuy.com/site/searchpage.jsp?st=3060+ti&_dyncharset=UTF-8&_dynSessConf=&id=pcat17071&type=page&sc=Global&cp=1&nrp=&sp=&qp=&list=n&af=true&iht=y&usc=All+Categories&ks=960&keys=keys'
 def timeSleep(x, driver):
     if (x != 0):
         for i in range(x, -1, -1):
@@ -44,7 +44,7 @@ def timeSleep(x, driver):
 def createDriver():
    """Creating driver."""
    options = Options()
-   options.headless = False # Change To False if you want to see Firefox Browser Again.
+   options.headless = True # Change To False if you want to see Firefox Browser Again.
    profile = webdriver.FirefoxProfile(r'C:\Users\salte\AppData\Roaming\Mozilla\Firefox\Profiles\zcvnzel9.default-release')
    driver = webdriver.Firefox(profile, options=options, executable_path=GeckoDriverManager().install())
    return driver
